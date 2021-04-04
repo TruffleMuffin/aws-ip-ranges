@@ -1,11 +1,5 @@
-﻿using System;
-
-namespace AWSIPRanges
+﻿namespace IPRanges
 {
-    public class DefaultRangeChecker
-    {
-    }
-
 	/// <summary>
 	/// Describes a CIDR IP Range checker
 	/// </summary>
