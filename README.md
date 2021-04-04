@@ -13,7 +13,7 @@ The package is designed to support any NET Standard setup.
 Recommendation for NET Core is:
 
 ```
-using IPRanges;
+using TruffleIPRanges;
 
 ...
 
@@ -25,3 +25,5 @@ public override void ConfigureServices(IServiceCollection services)
 
 ```
 This way when the class is initiated the latest version of the IP Range data from AWS will automatically be loaded.
+
+There is an internal throttle of 1 call per minute for the remote load on https://ip-ranges.amazonaws.com/ip-ranges.json. This is designed to prevent high concurrency/bad configuration causing large amounts of http traffic.

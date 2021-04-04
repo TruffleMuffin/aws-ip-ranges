@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace IPRanges
+namespace TruffleIPRanges
 {
 	/// <summary>
 	/// Internal helper for retrieving data from this package
@@ -26,7 +26,7 @@ namespace IPRanges
 
 			try
 			{
-				using (var stream = typeof(DataHelper).Assembly.GetManifestResourceStream($"IPRanges.Data.{name}"))
+				using (var stream = typeof(DataHelper).Assembly.GetManifestResourceStream($"TruffleIPRanges.Data.{name}"))
 				{
 					if (stream == null)
 					{

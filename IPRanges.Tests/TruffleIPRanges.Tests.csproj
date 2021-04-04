@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IPRanges\IPRanges.csproj" />
+    <ProjectReference Include="..\IPRanges\TruffleIPRanges.csproj" />
   </ItemGroup>
 
 </Project>

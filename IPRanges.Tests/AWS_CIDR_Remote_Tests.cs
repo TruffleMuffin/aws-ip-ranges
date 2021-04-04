@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace IPRanges.Tests
+namespace TruffleIPRanges.Tests
 {
 	public class AWS_CIDR_Remote_Tests
 	{

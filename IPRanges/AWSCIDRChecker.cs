@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 
-namespace IPRanges
+namespace TruffleIPRanges
 {
 	/// <summary>
 	/// An implementation of <see cref="ICIDRChecker"/> for AWS IP Ranges
@@ -14,8 +14,8 @@ namespace IPRanges
 	{
 		// Statically create this client so it is only created once for this package to prevent thread exhaustion
 		private static readonly HttpClient RAW_CLIENT = new HttpClient();
-
-		private readonly AWSCIDRRange[] remoteDataRanges;
+		private static AWSCIDRRange[] remoteDataRanges;
+		private static DateTime lastRemoteLoadDate;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AWSCIDRChecker"/>
@@ -30,9 +30,13 @@ namespace IPRanges
 
 			if (allowRemoteLoad)
 			{
-				var getTask = Task.Run(() => client.GetStringAsync(remoteLoadLocation));
-				getTask.Wait();
-				remoteDataRanges = GetData(getTask.Result).ToArray();
+				if (lastRemoteLoadDate.AddMinutes(1) < DateTime.UtcNow)
+				{
+					var getTask = Task.Run(() => client.GetStringAsync(remoteLoadLocation));
+					getTask.Wait();
+					remoteDataRanges = GetData(getTask.Result).ToArray();
+					lastRemoteLoadDate = DateTime.UtcNow;
+				}
 			}
 			else
 			{

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace IPRanges
+namespace TruffleIPRanges
 {
 	/// <summary>
 	/// Describes the data format of a AWS IP Prefix

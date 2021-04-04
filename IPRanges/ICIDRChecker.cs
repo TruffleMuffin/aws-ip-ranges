@@ -1,4 +1,4 @@
-﻿namespace IPRanges
+﻿namespace TruffleIPRanges
 {
 	/// <summary>
 	/// Describes a CIDR IP Range checker
