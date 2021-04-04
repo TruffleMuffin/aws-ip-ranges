@@ -1,3 +1,6 @@
+# 0.1.2 (Apr 04, 2021)
+* Adding description to package
+
 # 0.1.1 (Apr 04, 2021)
 * Adding MIT license to NuGet
 

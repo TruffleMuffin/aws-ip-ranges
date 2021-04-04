@@ -3,10 +3,13 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<Version>0.1.1</Version>
+		<Version>0.1.2</Version>
 		<PackageId>TruffleIPRanges</PackageId>
 		<Authors>https://github.com/TruffleMuffin</Authors>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Description>
+			Library for validating an input IP Range / CIDR is in the AWS IP Ranges.
+		</Description>
 	</PropertyGroup>
 
 	<ItemGroup>
