@@ -7,12 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPRanges", "IPRanges\IPRang
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPRanges.Tests", "IPRanges.Tests\IPRanges.Tests.csproj", "{545D32E3-10B1-432E-BCD0-EB221FF8A7DA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{A8E5A85C-505E-4C82-9731-E7CD172C9BF9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{A03F2322-2E37-4F64-BF45-DBB9ADEA8FC4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E4BC5022-A564-45C3-8AC7-9DA7A268DB2A}"
 	ProjectSection(SolutionItems) = preProject
-		build-and-test.yml = build-and-test.yml
-		deploy.yml = deploy.yml
+		.github\workflows\build-and-test.yml = .github\workflows\build-and-test.yml
+		.github\workflows\deploy.yml = .github\workflows\deploy.yml
 	EndProjectSection
 EndProject
 Global
@@ -52,9 +50,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{A03F2322-2E37-4F64-BF45-DBB9ADEA8FC4} = {A8E5A85C-505E-4C82-9731-E7CD172C9BF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3A21823D-6DC5-476C-9858-97489A1E512E}
